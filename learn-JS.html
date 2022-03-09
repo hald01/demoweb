@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learn JS basic</title>
+        <script>
+            function callchaiko() {
+                document.getElementById("demo4-1").innerHTML="Chaiko chan in battle (Gọi hàm từ trên thẻ 'head')";
+            }
+        </script>
+        <link rel="stylesheet" type="text/css" href="css/css-js-file.css" />
+    </head>
+    <body>
+        <div id="div0">
+            <h2>what can JS do ??</h2>
+            <p id="demo0-0"> Phương thức getElementById() sẽ trả về phần tử có ID được cung cấp. </p>
+            <p id="demo0-1"> Cú pháp: document.getElementById(elementID) </p>
+            <button type="button" onclick='document.getElementById("demo0-0").innerHTML = "đấy"'>Đừng bấm</button>
+            <button type="button" onclick='document.getElementById("demo0-1").innerHTML = "Nói rồi"'>Cũng đừng bấm</button>
+            <hr>
+        </div>
+        <div id="div1">
+            <p>JavaScript can change HTML attribute values.</p>
+            <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+            <button onclick="document.getElementById('myImage').src='img/cat.jpg'">Do you like Cat</button>
+            <img id="myImage" src="img/quest.jpg" style="width:200px">
+            <button onclick="document.getElementById('myImage').src='img/dog.jpg'">Do you like Dog</button>
+            <hr>
+        </div>
+        <div id="div2">
+            <p id="demo2-0">JavaScript can change the style of an HTML element.</p>
+            <button type="button" onclick="document.getElementById('demo2-0').style.fontSize='35px'">up uP UP</button>
+            <button type="button" onclick="document.getElementById('demo2-0').style.fontSize='5px'">DOWN DOwn down</button>
+            <hr>
+        </div>
+        <div id="div3">
+            <p id="demo3-0">JavaScript can hide HTML elements.</p>
+            <button type="button" onclick="document.getElementById('demo3-0').style.display='none'">Click to hide comment</button>
+            <button type="button" onclick="document.getElementById('demo3-0').style.display='block'">Click to unhide comment</button>
+            <p>JavaScript can show hidden HTML elements.</p>
+            <p id="demo3-1" style="display:none">oh! no oh! no</p>
+            <button type="button" onclick="document.getElementById('demo3-1').style.display='block'">Click to find hidden comment line</button>
+            <button type="button" onclick="document.getElementById('demo3-1').style.display='none'">Click to hide comment line</button>
+            <hr>
+        </div>
+        <div id="div4">
+            <h3>Nhúng JS vào file HTML</h3>
+            <h4>Nhúng các đoạn JS nhỏ</h4>
+            <p id="demo4-0"></p>
+            <script> 
+                document.getElementById("demo4-0").innerHTML = " Thẻ 'scrip': nhúng một đoạn ngắn JS vào HTML ";
+            </script>
+            <p>Thẻ 'scrip' có thể dùng để khai báo hàm trong thẻ 'head' rồi gọi ra trong thẻ 'body'</p>
+            <p>Hoặc cũng có thể khai báo trực tiếp trong thẻ 'body' rồi dùng luôn </p>
+            <p id="demo4-1">Đánh ghen thiếu người</p>
+            <button type="button" onclick="callchaiko()">Gọi trợ thủ</button>
+            <script>
+                function sellchaiko() {
+                    document.getElementById("demo4-1").innerHTML="Chaiko chan get out (Gọi hàm từ trong thẻ 'body')";
+                }
+            </script>
+            <button type="button" onclick="sellchaiko()">Xong việc</button>
+
+            <h4>Nhúng file JS từ ngoài vào</h4>
+            <p id="demo4-2"> </p>
+            <button type="button" onclick="callmrbean()" > Bấm để gọi Mr.bean</button>
+            <hr>
+        </div>
+        <div id="div5">
+            <h3> Khả năng hiển thị JavaScript</h3>
+            <p> JavaScript có thể "hiển thị" dữ liệu theo những cách khác nhau:</p>
+            <p> Viết vào một phần tử HTML, sử dụng <b>innerHTML</b></p>
+            <p id="demo5-2"> </p>
+            <p id="demo5-3"> Viết vào đầu ra HTML bằng cách sử dụng <b>document.write()</b></p>
+                <script>
+                    document.write(5+7);
+                </script>
+            <p id="demo5-4"> Viết vào một hộp cảnh báo, sử dụng <b>window.alert()</b></p>              
+                <button type="button" onclick="document.write(5 + 6)"> 5+6 = </button>
+                <button type="button" onclick="alert(5+6)"> 5+6 = </button>
+            <p id="demo5-5"> Ghi vào bảng điều khiển của trình duyệt bằng cách sử dụng <b>console.log()</b></p>
+            <pre style="font-size: 150%;" >
+                Các loại console:
+                console.info()  .
+                console.warn()  .
+                console.error() .
+                console assert()Câu lệnh này khá giống với console.error()
+                                Nhưng nó khác ở điểm console.assert() nó nhận 2 tham số đầu vào
+                                gồm một biểu thức boolean và một message được in ra.
+                                nếu như biểu thức boolean đó trả về giá trị false
+                console.clear() được sử dụng để xóa hết tất cả những nội dung có trên cửa sổ lệnh console.
+                console.dir()   Với lệnh này ta có thể in ra DOM, truyền các object bình thường thì nó cũng có thể in ra được như console.log()
+                                Với console.log() thì nó sẽ in DOM ra dưới dạng HTML.
+                                Còn với lệnh console.dir(), nó sẽ in ra dưới dạng một object
+                                với các thuộc tính là các element nằm bên trong DOM.                
+                console.group() Với console.log() nó sẽ in ra toàn bộ kết quả trên cửa sổ console
+                                Với console.group() nó sẽ in ra kết quả có tổ chức hơn
+                                bằng cách gom các kết quả thành các block một cách có tổ chức.
+                                Nó sẽ gom các câu lệnh sau nó cho đến khi gặp console.groupEnd() thì sẽ dừng lại mà back ra lại một level.
+                
+                
+                console.table() nó sẽ in kết quả ra cửa sổ console dưới dạng bảng.
+                                Ta có thể sử dụng nó để in các data ở dạng: object, array, array of object, array of arrays
+                console.time()  Để muốn biết thời gian chạy của một đoạn code bất kỳ mất bao lâu thì bạn có thể dùng lệnh này.
+                                Để chạy được thì bạn cần đặt đoạn code của mình ở giữa hai lệnh console.time() và console.timeEnd().
+                                Ngoài ra nếu bạn muốn in ra thời gian chạy của một đoạn code bất kỳ mà bạn muốn
+                                nữa thì có thể dùng lệnh console.timeLog() bên trong cặp lệnh console.time() và console.timeEnd().       
+            </pre>
+            <hr>
+        </div>
+        <div id="div6">
+            <h3>Từ khóa trong JS</h3>
+            <pre>
+                <p style="font-size: 130%;">
+                    từ khóa     Miêu tả:
+                    var         Khai báo một biến, có thể khai báo lại.
+                    let         Khai báo một biến có thể thay đổi, có phạm vi khối, không thể khai báo lại.
+                    const       Khai báo một hằng số . với mảng: có thể thay đổi các phần tử trong mảng.
+                    if          Đánh dấu một khối câu lệnh sẽ được thực thi theo một điều kiện
+                    switch      Đánh dấu một khối câu lệnh sẽ được thực thi trong các trường hợp khác nhau
+                    for         Đánh dấu một khối câu lệnh sẽ được thực thi trong một vòng lặp
+                    function    Khai báo một hàm
+                    return      Thoát khỏi một chức năng
+                    try         Triển khai xử lý lỗi cho một khối câu lệnh
+                    " '_bien-x' Thường sử dụng dấu gạch dưới làm bí danh cho các biến "private (hidden) "
+                </p>
+            </pre>
+            <P id="demo6-1"> </P>
+            <P id="demo6-2"> </P>
+            <br>
+            <h4> JavaScript Search Methods</h4>
+                <p> String indexOf() :  Phương thức string.indexOf() sẽ kiểm tra và tra về vị trí xuất hiện đầu tiên 
+                                        Nếu không tìm thấy chuỗi con trong chuỗi gốc, phương thức sẽ trả về -1. </p>
+                    <button type="button" onclick="ham_index0f()" > Kiem tra "qua xoai" trong chuoi "qua xoai non la qua xoai chua" </button>
+                    <p id="demo6-3">  </p>
+                <p> String lastIndexOf() : Trả về vị trí xuất hiện lần cuối cùng của một giá trị được tìm thấy trong chuỗi </p>
+                    <button type="button" onclick="ham_lastindex0f()" > Kiem tra "qua xoai" trong chuoi "qua xoai non la qua xoai chua" </button>
+                    <p id="demo6-4">  </p>
+                <p> String startsWith() : Xác định xem có phải chuỗi được bắt đầu bởi ký tự (hoặc chuỗi ký tự) do bạn chỉ định hay không </p>
+                    <script>
+                        document.write('qua xoai non la qua xoai chua');
+                        document.write('<br>');
+                        document.write('<br>');
+                        document.write('bat dau bang "qua x"');
+                    </script>
+                    <p id="demo6-5"></p>
+                    <script>
+                        document.write('bat dau bang "a xoai"');
+                    </script>
+                    <p id="demo6-6"></p>
+                <p> String endsWith() : kiểm tra xem một chuỗi có kết thúc bằng một kí tự hoặc một chuỗi được cung cấp hay không.</p>
+                    <script>
+                        document.write('qua xoai non la qua xoai chua');
+                        document.write('<br>');
+                        document.write('<br>');
+                        document.write('ket thuc bang "qua x"');
+                    </script>
+                    <p id="demo6-7"></p>
+                    <script>
+                        document.write('ket thuc bang "chua"');
+                    </script>
+                    <p id="demo6-8"></p>
+            <hr>
+        </div>
+        <div id="div7">
+            <h4>Arrays</h4>
+            <p>Để lặp qua một mảng thì tốt nhất là dùng vòng lặp:</p>
+            <p id="demo7-0"></p>
+            <p id="demo7-1"></p>
+            <p id="demo7-2"></p>
+            <p id="demo7-3"></p>
+            <p id="demo7-4"></p>
+            <p> Gia tri 'src='img/cat.jpg'' duoc sua thanh 'src='img/dog.jpg''</p>
+            <img id="cat_img" src="img/cat.jpg" width="160" height="120">
+            <p id="demo7-5">  </p> 
+            <hr>
+        </div>
+        <div id="div8">
+            <h4>ham kiem tra</h4>      
+            <p> Nhap so bat ki trong khoang 1 va 10:</p>
+
+            <input id="numb">   
+            <button type="button" onclick="kiemtra()"> Nhap </button>
+            <p id="demo8-0"></p>
+
+            <form action="dia chi ma form gui du lieu den" method="post">
+                <input type="text" name="fname" required>
+                <input type="submit" value="Submit">
+            </form>
+            <pre style="font-size: 150%" > 
+                'form' action="dia chi ma form gui du lieu den" method="post">
+                    'input type="text" name="fname" required'
+                    'input type="submit" value="Submit"'
+                '/form'
+
+            <h4> day la demo hinh dong </h4>
+            <p><button onclick="myMove()">Click de xem</button></p> 
+                <div id ="san_bong">
+                    <div id ="qua_bong"></div>
+                </div>
+            </pre>
+            <hr>
+        </div>
+        <div id="div9">
+            <h4> Event </h4>                  
+                <p> <b>Event va Mo ta </b></p>
+                <p> <b>onchange:</b> Khi mot phan tu html da thay doi </p>
+                <p> <b>onclick:</b> Khi click vao mot phan tu html </p>
+                    <div>
+                        <p id="demo9-1" onclick="chinhsua1(this)"> Click vao day</p>
+                        <p id="demo9-2" onclick="this.innerHTML='Loi roi !!'"> Click vao dong nay </p>
+                        <p id="demo9-3"> </p>
+                        <button onclick="document.getElementById('demo9-2').innerHTML='Da bi thay doi'" > Click vao button nay  </button>
+                        <button onclick="chinhsua2()" > Click de thay doi button </button>
+                        <button onclick="calltime()" > Click de xem thoi gian </button>
+                    </div>
+                <p> <b>onmouseover:</b> Khi ta di chuyen chuot toi mot phan tu html </p>
+                <p> <b>onmouseout:</b> Khi ta di chuyen chuot ra khoi mot phan tu html </p>
+                    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+                        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+                        Mouse Over Me
+                    </div>
+                <p> <b>onkeydown:</b> Khi an mot phim tren ban phim </p>
+                <p> <b>onload:</b> Khi trinh duyet da load xong moi thu (image, css, js) thi moi doan code nam trong do moi duoc chay </p>
+                <button id="myBtn1">Click xem co gi 1</button>  
+                <button id="myBtn2">Click xem co gi 2</button>  
+                <button id="myBtn3">move xem co gi 1</button>  
+                <div> Tinh toan <br>
+                <input id="demo9-in1" />
+                <p> * </p>
+                <input id="demo9-in2" />
+                <p> = </p>
+                <p id="demo9-ou1"> </p>
+                <button id="myBtn4" > Xem ket qua: </button>  
+                </div>
+                <p id="demo9-4" > </p>
+                <p id="demo9-5" >  </p>
+            <hr>
+        </div>
+        <div id="div10">
+            <hr>
+        </div>
+        <div id="div11">
+            <hr>
+        </div>
+        <div id="div12">
+            <hr>
+        </div>
+        <div id="div13">
+            <hr>
+        </div>
+        <div id="div14">
+            <hr>
+        </div>
+
+        <script src="js/scripfile.js" > </script>                        
+    </body>
+</html>

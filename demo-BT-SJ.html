@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Theme Simply Me</title>
+    <meta charset="utf-8" >
+    <meta name="Dang Ha" content="bootstrap, html" >
+    <!-- them bootstrap vao file -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/css-bt-file.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<!---->
+<body>
+    <nav class="navbar navbar-default"> <!-- tao thanh cong cu bang bootstrap-->
+        <div class="container">
+            <div class="navbar-header" > <!-- Chia thanh menu thanh 2 phan rieng biet-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#thanhdieuhuong"> <!-- Dinh dang menu dang list do xuong -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Me</a>
+            </div>
+            <div class="collapse navbar-collapse" id="thanhdieuhuong">
+                <ul class="nav navbar-nav navbar-right"> <!-- Di chuyen phan nay sang ben phai trang web -->
+                    <li><a href="#">WHO</a></li> <!-- Nhay len dau trang -->
+                    <li><a href="#">WHAT</a></li>
+                    <li><a href="#bai_tho">HOA CO MAY</a></li>
+                    <li><a href="#contact"> ~ </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid bg-1 text-center">
+        <h3 id="who">who Am I ?</h3>
+        <!-- img-circle giup hinh anh bo goc tron -->
+        <img src="img/xuanquynh-1.jpg" class="img-circle" style="display: inline;" alt="xuan quynh" width="350" height="350" >
+        <h3>I'm Xuanquynh</h3>
+    </div><!-- end div 1-->
+
+    <div class="container-fluid bg-2 text-center">
+        <h3 id="what"> What Am I ?</h3>
+        <p> Xuân Quỳnh, tên đầy đủ là Nguyễn Thị Xuân Quỳnh, là một nữ nhà thơ người Việt Nam. 
+            Bà nổi tiếng với nhiều bài thơ được nhiều người biết đến như Thuyền và biển, Sóng, 
+            Thơ tình cuối mùa thu, Tiếng gà trưa. </p>
+        <!-- them icon cho bieu tuong search -->
+        <a href="#" class="btn btn-default btn-lg"> <span class="glyphicon glyphicon-search"></span> Search </a>
+    </div><!--end div 2-->
+
+    <div class="container-fluid bg-3 text-center">
+        <h3 id="bai_tho">Hoa Cỏ May</h3>
+        <div class="row" >    
+            <div class="col-sm-4 text-left" >
+                <p>Cát vắng, sông đầy, cây ngẩn ngơ,</p>
+                <p>Không gian xao xuyến chuyển sang mùa.</p>
+                <p>Tên mình ai gọi sau vòm lá,</p>
+                <p>Lối cũ em về nay đã thu.</p>
+                <img src="img/song-1.jpg" alt="Image" class="img-responsive" style="width:100%" >
+            </div>
+            <div class="col-sm-4 text-left" >
+                <p>Mây trắng bay đi cùng với gió,</p>
+                <p>Lòng như trời biếc lúc nguyên sơ.</p>
+                <p>Đắng cay gửi lại bao mùa cũ,</p>
+                <p>Thơ viết đôi dòng theo gió xa.</p>                                                           
+                <img src="img/song-2.jpg" alt="Image" class="img-responsive" style="width:100%" >
+            </div>
+            <div class="col-sm-4 text-left">  
+                <p>Khắp nẻo dâng đầy hoa cỏ may</p>
+                <p>Áo em sơ ý cỏ găm đầy</p>
+                <p>Lời yêu mỏng mảnh như màu khói,</p>
+                <p>Ai biết lòng anh có đổi thay?</p>                       
+                <img src="img/song-3.jpg" alt="Image" class="img-responsive" style="width:100%" >
+            </div>
+        </div>
+    </div><!--end div 3-->
+    
+    <div class="container-fluid bg-4 text-center">
+        <h3 id="contact"> Contact me:</h3>
+        <p>Email: null</p>
+        <p>Discord: null</p>
+    </div>
+</body>
+</html>
